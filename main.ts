@@ -49,7 +49,7 @@ router
     context.response.body = visitantes;
   })
   .patch("/visitante/:id", async (context) => {
-    const { nome, empresa, email } = await context.request.body.json();
+    const { nome, empresa, email, printed } = await context.request.body.json();
     const { id } = context.params;
     const visitante = await prisma.visitante.update({
       where: {
@@ -59,7 +59,7 @@ router
         nome: nome.toUpperCase(),
         empresa: empresa,
         email: email,
-        printed: true,
+        printed: Boolean(printed),
       },
     });
     context.response.body = ["atualizado", visitante];
