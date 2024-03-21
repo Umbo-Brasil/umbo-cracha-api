@@ -789,9 +789,9 @@ lista.forEach((nome) => {
     nome: nome.toUpperCase(),
     email: "",
     empresa: "",
-    printed: false
-  })
-})
+    printed: false,
+  });
+});
 
 const prisma = new PrismaClient({
   datasources: {
@@ -805,9 +805,9 @@ const visitantes: Prisma.VisitanteCreateInput[] = result;
 
 for (const pessoa of visitantes) {
   const cadastro = await prisma.visitante.create(
-    { data: pessoa }
-  )
-  console.log(`Usuário criado com o id: ${cadastro.id}`)
+    { data: pessoa },
+  );
+  console.log(`Usuário criado com o id: ${cadastro.id}`);
 }
 
 console.log("Seeding finished");
