@@ -8,7 +8,7 @@ const env = await load();
 const prisma = new PrismaClient({
   datasources: {
     db: {
-      url: env.DATABASE_URL,
+      url: Deno.env.get('AMBIENTE') === 'prod' ? Deno.env.get('DATABASE_URL') : env.DATABASE_URL,
     },
   },
 });
