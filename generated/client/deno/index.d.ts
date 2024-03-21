@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model usuario
+ * Model Visitante
  * 
  */
-export type usuario = $Result.DefaultSelection<Prisma.$usuarioPayload>
+export type Visitante = $Result.DefaultSelection<Prisma.$VisitantePayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type usuario = $Result.DefaultSelection<Prisma.$usuarioPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Usuarios
- * const usuarios = await prisma.usuario.findMany()
+ * // Fetch zero or more Visitantes
+ * const visitantes = await prisma.visitante.findMany()
  * ```
  *
  * 
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Usuarios
-   * const usuarios = await prisma.usuario.findMany()
+   * // Fetch zero or more Visitantes
+   * const visitantes = await prisma.visitante.findMany()
    * ```
    *
    * 
@@ -142,14 +142,14 @@ export class PrismaClient<
   $extends: $Extensions.ExtendsHook<'extends', Prisma.TypeMapCb, ExtArgs>
 
       /**
-   * `prisma.usuario`: Exposes CRUD operations for the **usuario** model.
+   * `prisma.visitante`: Exposes CRUD operations for the **Visitante** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Usuarios
-    * const usuarios = await prisma.usuario.findMany()
+    * // Fetch zero or more Visitantes
+    * const visitantes = await prisma.visitante.findMany()
     * ```
     */
-  get usuario(): Prisma.usuarioDelegate<ExtArgs>;
+  get visitante(): Prisma.VisitanteDelegate<ExtArgs>;
 }
 
 export namespace Prisma {
@@ -620,7 +620,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    usuario: 'usuario'
+    Visitante: 'Visitante'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -637,73 +637,73 @@ export namespace Prisma {
 
   export type TypeMap<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     meta: {
-      modelProps: 'usuario'
+      modelProps: 'visitante'
       txIsolationLevel: Prisma.TransactionIsolationLevel
     },
     model: {
-      usuario: {
-        payload: Prisma.$usuarioPayload<ExtArgs>
-        fields: Prisma.usuarioFieldRefs
+      Visitante: {
+        payload: Prisma.$VisitantePayload<ExtArgs>
+        fields: Prisma.VisitanteFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.usuarioFindUniqueArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$usuarioPayload> | null
+            args: Prisma.VisitanteFindUniqueArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$VisitantePayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.usuarioFindUniqueOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$usuarioPayload>
+            args: Prisma.VisitanteFindUniqueOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$VisitantePayload>
           }
           findFirst: {
-            args: Prisma.usuarioFindFirstArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$usuarioPayload> | null
+            args: Prisma.VisitanteFindFirstArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$VisitantePayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.usuarioFindFirstOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$usuarioPayload>
+            args: Prisma.VisitanteFindFirstOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$VisitantePayload>
           }
           findMany: {
-            args: Prisma.usuarioFindManyArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$usuarioPayload>[]
+            args: Prisma.VisitanteFindManyArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$VisitantePayload>[]
           }
           create: {
-            args: Prisma.usuarioCreateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$usuarioPayload>
+            args: Prisma.VisitanteCreateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$VisitantePayload>
           }
           createMany: {
-            args: Prisma.usuarioCreateManyArgs<ExtArgs>,
+            args: Prisma.VisitanteCreateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           delete: {
-            args: Prisma.usuarioDeleteArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$usuarioPayload>
+            args: Prisma.VisitanteDeleteArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$VisitantePayload>
           }
           update: {
-            args: Prisma.usuarioUpdateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$usuarioPayload>
+            args: Prisma.VisitanteUpdateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$VisitantePayload>
           }
           deleteMany: {
-            args: Prisma.usuarioDeleteManyArgs<ExtArgs>,
+            args: Prisma.VisitanteDeleteManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           updateMany: {
-            args: Prisma.usuarioUpdateManyArgs<ExtArgs>,
+            args: Prisma.VisitanteUpdateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           upsert: {
-            args: Prisma.usuarioUpsertArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$usuarioPayload>
+            args: Prisma.VisitanteUpsertArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$VisitantePayload>
           }
           aggregate: {
-            args: Prisma.UsuarioAggregateArgs<ExtArgs>,
-            result: $Utils.Optional<AggregateUsuario>
+            args: Prisma.VisitanteAggregateArgs<ExtArgs>,
+            result: $Utils.Optional<AggregateVisitante>
           }
           groupBy: {
-            args: Prisma.usuarioGroupByArgs<ExtArgs>,
-            result: $Utils.Optional<UsuarioGroupByOutputType>[]
+            args: Prisma.VisitanteGroupByArgs<ExtArgs>,
+            result: $Utils.Optional<VisitanteGroupByOutputType>[]
           }
           count: {
-            args: Prisma.usuarioCountArgs<ExtArgs>,
-            result: $Utils.Optional<UsuarioCountAggregateOutputType> | number
+            args: Prisma.VisitanteCountArgs<ExtArgs>,
+            result: $Utils.Optional<VisitanteCountAggregateOutputType> | number
           }
         }
       }
@@ -867,34 +867,26 @@ export namespace Prisma {
    */
 
   /**
-   * Model usuario
+   * Model Visitante
    */
 
-  export type AggregateUsuario = {
-    _count: UsuarioCountAggregateOutputType | null
-    _avg: UsuarioAvgAggregateOutputType | null
-    _sum: UsuarioSumAggregateOutputType | null
-    _min: UsuarioMinAggregateOutputType | null
-    _max: UsuarioMaxAggregateOutputType | null
+  export type AggregateVisitante = {
+    _count: VisitanteCountAggregateOutputType | null
+    _avg: VisitanteAvgAggregateOutputType | null
+    _sum: VisitanteSumAggregateOutputType | null
+    _min: VisitanteMinAggregateOutputType | null
+    _max: VisitanteMaxAggregateOutputType | null
   }
 
-  export type UsuarioAvgAggregateOutputType = {
+  export type VisitanteAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type UsuarioSumAggregateOutputType = {
+  export type VisitanteSumAggregateOutputType = {
     id: number | null
   }
 
-  export type UsuarioMinAggregateOutputType = {
-    id: number | null
-    nome: string | null
-    email: string | null
-    empresa: string | null
-    printed: boolean | null
-  }
-
-  export type UsuarioMaxAggregateOutputType = {
+  export type VisitanteMinAggregateOutputType = {
     id: number | null
     nome: string | null
     email: string | null
@@ -902,7 +894,15 @@ export namespace Prisma {
     printed: boolean | null
   }
 
-  export type UsuarioCountAggregateOutputType = {
+  export type VisitanteMaxAggregateOutputType = {
+    id: number | null
+    nome: string | null
+    email: string | null
+    empresa: string | null
+    printed: boolean | null
+  }
+
+  export type VisitanteCountAggregateOutputType = {
     id: number
     nome: number
     email: number
@@ -912,23 +912,15 @@ export namespace Prisma {
   }
 
 
-  export type UsuarioAvgAggregateInputType = {
+  export type VisitanteAvgAggregateInputType = {
     id?: true
   }
 
-  export type UsuarioSumAggregateInputType = {
+  export type VisitanteSumAggregateInputType = {
     id?: true
   }
 
-  export type UsuarioMinAggregateInputType = {
-    id?: true
-    nome?: true
-    email?: true
-    empresa?: true
-    printed?: true
-  }
-
-  export type UsuarioMaxAggregateInputType = {
+  export type VisitanteMinAggregateInputType = {
     id?: true
     nome?: true
     email?: true
@@ -936,7 +928,15 @@ export namespace Prisma {
     printed?: true
   }
 
-  export type UsuarioCountAggregateInputType = {
+  export type VisitanteMaxAggregateInputType = {
+    id?: true
+    nome?: true
+    email?: true
+    empresa?: true
+    printed?: true
+  }
+
+  export type VisitanteCountAggregateInputType = {
     id?: true
     nome?: true
     email?: true
@@ -945,128 +945,128 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type UsuarioAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which usuario to aggregate.
+     * Filter which Visitante to aggregate.
      */
-    where?: usuarioWhereInput
+    where?: VisitanteWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of usuarios to fetch.
+     * Determine the order of Visitantes to fetch.
      */
-    orderBy?: usuarioOrderByWithRelationInput | usuarioOrderByWithRelationInput[]
+    orderBy?: VisitanteOrderByWithRelationInput | VisitanteOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: usuarioWhereUniqueInput
+    cursor?: VisitanteWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` usuarios from the position of the cursor.
+     * Take `±n` Visitantes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` usuarios.
+     * Skip the first `n` Visitantes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned usuarios
+     * Count returned Visitantes
     **/
-    _count?: true | UsuarioCountAggregateInputType
+    _count?: true | VisitanteCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: UsuarioAvgAggregateInputType
+    _avg?: VisitanteAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: UsuarioSumAggregateInputType
+    _sum?: VisitanteSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: UsuarioMinAggregateInputType
+    _min?: VisitanteMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: UsuarioMaxAggregateInputType
+    _max?: VisitanteMaxAggregateInputType
   }
 
-  export type GetUsuarioAggregateType<T extends UsuarioAggregateArgs> = {
-        [P in keyof T & keyof AggregateUsuario]: P extends '_count' | 'count'
+  export type GetVisitanteAggregateType<T extends VisitanteAggregateArgs> = {
+        [P in keyof T & keyof AggregateVisitante]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateUsuario[P]>
-      : GetScalarType<T[P], AggregateUsuario[P]>
+        : GetScalarType<T[P], AggregateVisitante[P]>
+      : GetScalarType<T[P], AggregateVisitante[P]>
   }
 
 
 
 
-  export type usuarioGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: usuarioWhereInput
-    orderBy?: usuarioOrderByWithAggregationInput | usuarioOrderByWithAggregationInput[]
-    by: UsuarioScalarFieldEnum[] | UsuarioScalarFieldEnum
-    having?: usuarioScalarWhereWithAggregatesInput
+  export type VisitanteGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: VisitanteWhereInput
+    orderBy?: VisitanteOrderByWithAggregationInput | VisitanteOrderByWithAggregationInput[]
+    by: VisitanteScalarFieldEnum[] | VisitanteScalarFieldEnum
+    having?: VisitanteScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: UsuarioCountAggregateInputType | true
-    _avg?: UsuarioAvgAggregateInputType
-    _sum?: UsuarioSumAggregateInputType
-    _min?: UsuarioMinAggregateInputType
-    _max?: UsuarioMaxAggregateInputType
+    _count?: VisitanteCountAggregateInputType | true
+    _avg?: VisitanteAvgAggregateInputType
+    _sum?: VisitanteSumAggregateInputType
+    _min?: VisitanteMinAggregateInputType
+    _max?: VisitanteMaxAggregateInputType
   }
 
-  export type UsuarioGroupByOutputType = {
+  export type VisitanteGroupByOutputType = {
     id: number
     nome: string
     email: string
     empresa: string
     printed: boolean
-    _count: UsuarioCountAggregateOutputType | null
-    _avg: UsuarioAvgAggregateOutputType | null
-    _sum: UsuarioSumAggregateOutputType | null
-    _min: UsuarioMinAggregateOutputType | null
-    _max: UsuarioMaxAggregateOutputType | null
+    _count: VisitanteCountAggregateOutputType | null
+    _avg: VisitanteAvgAggregateOutputType | null
+    _sum: VisitanteSumAggregateOutputType | null
+    _min: VisitanteMinAggregateOutputType | null
+    _max: VisitanteMaxAggregateOutputType | null
   }
 
-  type GetUsuarioGroupByPayload<T extends usuarioGroupByArgs> = Prisma.PrismaPromise<
+  type GetVisitanteGroupByPayload<T extends VisitanteGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<UsuarioGroupByOutputType, T['by']> &
+      PickEnumerable<VisitanteGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof UsuarioGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof VisitanteGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], UsuarioGroupByOutputType[P]>
-            : GetScalarType<T[P], UsuarioGroupByOutputType[P]>
+              : GetScalarType<T[P], VisitanteGroupByOutputType[P]>
+            : GetScalarType<T[P], VisitanteGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type usuarioSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type VisitanteSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     nome?: boolean
     email?: boolean
     empresa?: boolean
     printed?: boolean
-  }, ExtArgs["result"]["usuario"]>
+  }, ExtArgs["result"]["visitante"]>
 
-  export type usuarioSelectScalar = {
+  export type VisitanteSelectScalar = {
     id?: boolean
     nome?: boolean
     email?: boolean
@@ -1075,8 +1075,8 @@ export namespace Prisma {
   }
 
 
-  export type $usuarioPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "usuario"
+  export type $VisitantePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Visitante"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -1084,160 +1084,160 @@ export namespace Prisma {
       email: string
       empresa: string
       printed: boolean
-    }, ExtArgs["result"]["usuario"]>
+    }, ExtArgs["result"]["visitante"]>
     composites: {}
   }
 
 
-  type usuarioGetPayload<S extends boolean | null | undefined | usuarioDefaultArgs> = $Result.GetResult<Prisma.$usuarioPayload, S>
+  type VisitanteGetPayload<S extends boolean | null | undefined | VisitanteDefaultArgs> = $Result.GetResult<Prisma.$VisitantePayload, S>
 
-  type usuarioCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<usuarioFindManyArgs, 'select' | 'include' | 'distinct'> & {
-      select?: UsuarioCountAggregateInputType | true
+  type VisitanteCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<VisitanteFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: VisitanteCountAggregateInputType | true
     }
 
-  export interface usuarioDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['usuario'], meta: { name: 'usuario' } }
+  export interface VisitanteDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Visitante'], meta: { name: 'Visitante' } }
     /**
-     * Find zero or one Usuario that matches the filter.
-     * @param {usuarioFindUniqueArgs} args - Arguments to find a Usuario
+     * Find zero or one Visitante that matches the filter.
+     * @param {VisitanteFindUniqueArgs} args - Arguments to find a Visitante
      * @example
-     * // Get one Usuario
-     * const usuario = await prisma.usuario.findUnique({
+     * // Get one Visitante
+     * const visitante = await prisma.visitante.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUnique<T extends usuarioFindUniqueArgs<ExtArgs>>(
-      args: SelectSubset<T, usuarioFindUniqueArgs<ExtArgs>>
-    ): Prisma__usuarioClient<$Result.GetResult<Prisma.$usuarioPayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
+    findUnique<T extends VisitanteFindUniqueArgs<ExtArgs>>(
+      args: SelectSubset<T, VisitanteFindUniqueArgs<ExtArgs>>
+    ): Prisma__VisitanteClient<$Result.GetResult<Prisma.$VisitantePayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
 
     /**
-     * Find one Usuario that matches the filter or throw an error  with `error.code='P2025'` 
+     * Find one Visitante that matches the filter or throw an error  with `error.code='P2025'` 
      *     if no matches were found.
-     * @param {usuarioFindUniqueOrThrowArgs} args - Arguments to find a Usuario
+     * @param {VisitanteFindUniqueOrThrowArgs} args - Arguments to find a Visitante
      * @example
-     * // Get one Usuario
-     * const usuario = await prisma.usuario.findUniqueOrThrow({
+     * // Get one Visitante
+     * const visitante = await prisma.visitante.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUniqueOrThrow<T extends usuarioFindUniqueOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, usuarioFindUniqueOrThrowArgs<ExtArgs>>
-    ): Prisma__usuarioClient<$Result.GetResult<Prisma.$usuarioPayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
+    findUniqueOrThrow<T extends VisitanteFindUniqueOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, VisitanteFindUniqueOrThrowArgs<ExtArgs>>
+    ): Prisma__VisitanteClient<$Result.GetResult<Prisma.$VisitantePayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
 
     /**
-     * Find the first Usuario that matches the filter.
+     * Find the first Visitante that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usuarioFindFirstArgs} args - Arguments to find a Usuario
+     * @param {VisitanteFindFirstArgs} args - Arguments to find a Visitante
      * @example
-     * // Get one Usuario
-     * const usuario = await prisma.usuario.findFirst({
+     * // Get one Visitante
+     * const visitante = await prisma.visitante.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirst<T extends usuarioFindFirstArgs<ExtArgs>>(
-      args?: SelectSubset<T, usuarioFindFirstArgs<ExtArgs>>
-    ): Prisma__usuarioClient<$Result.GetResult<Prisma.$usuarioPayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
+    findFirst<T extends VisitanteFindFirstArgs<ExtArgs>>(
+      args?: SelectSubset<T, VisitanteFindFirstArgs<ExtArgs>>
+    ): Prisma__VisitanteClient<$Result.GetResult<Prisma.$VisitantePayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
 
     /**
-     * Find the first Usuario that matches the filter or
+     * Find the first Visitante that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usuarioFindFirstOrThrowArgs} args - Arguments to find a Usuario
+     * @param {VisitanteFindFirstOrThrowArgs} args - Arguments to find a Visitante
      * @example
-     * // Get one Usuario
-     * const usuario = await prisma.usuario.findFirstOrThrow({
+     * // Get one Visitante
+     * const visitante = await prisma.visitante.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirstOrThrow<T extends usuarioFindFirstOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, usuarioFindFirstOrThrowArgs<ExtArgs>>
-    ): Prisma__usuarioClient<$Result.GetResult<Prisma.$usuarioPayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
+    findFirstOrThrow<T extends VisitanteFindFirstOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, VisitanteFindFirstOrThrowArgs<ExtArgs>>
+    ): Prisma__VisitanteClient<$Result.GetResult<Prisma.$VisitantePayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
 
     /**
-     * Find zero or more Usuarios that matches the filter.
+     * Find zero or more Visitantes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usuarioFindManyArgs=} args - Arguments to filter and select certain fields only.
+     * @param {VisitanteFindManyArgs=} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Usuarios
-     * const usuarios = await prisma.usuario.findMany()
+     * // Get all Visitantes
+     * const visitantes = await prisma.visitante.findMany()
      * 
-     * // Get first 10 Usuarios
-     * const usuarios = await prisma.usuario.findMany({ take: 10 })
+     * // Get first 10 Visitantes
+     * const visitantes = await prisma.visitante.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const usuarioWithIdOnly = await prisma.usuario.findMany({ select: { id: true } })
+     * const visitanteWithIdOnly = await prisma.visitante.findMany({ select: { id: true } })
      * 
     **/
-    findMany<T extends usuarioFindManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, usuarioFindManyArgs<ExtArgs>>
-    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$usuarioPayload<ExtArgs>, T, 'findMany'>>
+    findMany<T extends VisitanteFindManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, VisitanteFindManyArgs<ExtArgs>>
+    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VisitantePayload<ExtArgs>, T, 'findMany'>>
 
     /**
-     * Create a Usuario.
-     * @param {usuarioCreateArgs} args - Arguments to create a Usuario.
+     * Create a Visitante.
+     * @param {VisitanteCreateArgs} args - Arguments to create a Visitante.
      * @example
-     * // Create one Usuario
-     * const Usuario = await prisma.usuario.create({
+     * // Create one Visitante
+     * const Visitante = await prisma.visitante.create({
      *   data: {
-     *     // ... data to create a Usuario
+     *     // ... data to create a Visitante
      *   }
      * })
      * 
     **/
-    create<T extends usuarioCreateArgs<ExtArgs>>(
-      args: SelectSubset<T, usuarioCreateArgs<ExtArgs>>
-    ): Prisma__usuarioClient<$Result.GetResult<Prisma.$usuarioPayload<ExtArgs>, T, 'create'>, never, ExtArgs>
+    create<T extends VisitanteCreateArgs<ExtArgs>>(
+      args: SelectSubset<T, VisitanteCreateArgs<ExtArgs>>
+    ): Prisma__VisitanteClient<$Result.GetResult<Prisma.$VisitantePayload<ExtArgs>, T, 'create'>, never, ExtArgs>
 
     /**
-     * Create many Usuarios.
-     *     @param {usuarioCreateManyArgs} args - Arguments to create many Usuarios.
+     * Create many Visitantes.
+     *     @param {VisitanteCreateManyArgs} args - Arguments to create many Visitantes.
      *     @example
-     *     // Create many Usuarios
-     *     const usuario = await prisma.usuario.createMany({
+     *     // Create many Visitantes
+     *     const visitante = await prisma.visitante.createMany({
      *       data: {
      *         // ... provide data here
      *       }
      *     })
      *     
     **/
-    createMany<T extends usuarioCreateManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, usuarioCreateManyArgs<ExtArgs>>
+    createMany<T extends VisitanteCreateManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, VisitanteCreateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Delete a Usuario.
-     * @param {usuarioDeleteArgs} args - Arguments to delete one Usuario.
+     * Delete a Visitante.
+     * @param {VisitanteDeleteArgs} args - Arguments to delete one Visitante.
      * @example
-     * // Delete one Usuario
-     * const Usuario = await prisma.usuario.delete({
+     * // Delete one Visitante
+     * const Visitante = await prisma.visitante.delete({
      *   where: {
-     *     // ... filter to delete one Usuario
+     *     // ... filter to delete one Visitante
      *   }
      * })
      * 
     **/
-    delete<T extends usuarioDeleteArgs<ExtArgs>>(
-      args: SelectSubset<T, usuarioDeleteArgs<ExtArgs>>
-    ): Prisma__usuarioClient<$Result.GetResult<Prisma.$usuarioPayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
+    delete<T extends VisitanteDeleteArgs<ExtArgs>>(
+      args: SelectSubset<T, VisitanteDeleteArgs<ExtArgs>>
+    ): Prisma__VisitanteClient<$Result.GetResult<Prisma.$VisitantePayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
 
     /**
-     * Update one Usuario.
-     * @param {usuarioUpdateArgs} args - Arguments to update one Usuario.
+     * Update one Visitante.
+     * @param {VisitanteUpdateArgs} args - Arguments to update one Visitante.
      * @example
-     * // Update one Usuario
-     * const usuario = await prisma.usuario.update({
+     * // Update one Visitante
+     * const visitante = await prisma.visitante.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1247,34 +1247,34 @@ export namespace Prisma {
      * })
      * 
     **/
-    update<T extends usuarioUpdateArgs<ExtArgs>>(
-      args: SelectSubset<T, usuarioUpdateArgs<ExtArgs>>
-    ): Prisma__usuarioClient<$Result.GetResult<Prisma.$usuarioPayload<ExtArgs>, T, 'update'>, never, ExtArgs>
+    update<T extends VisitanteUpdateArgs<ExtArgs>>(
+      args: SelectSubset<T, VisitanteUpdateArgs<ExtArgs>>
+    ): Prisma__VisitanteClient<$Result.GetResult<Prisma.$VisitantePayload<ExtArgs>, T, 'update'>, never, ExtArgs>
 
     /**
-     * Delete zero or more Usuarios.
-     * @param {usuarioDeleteManyArgs} args - Arguments to filter Usuarios to delete.
+     * Delete zero or more Visitantes.
+     * @param {VisitanteDeleteManyArgs} args - Arguments to filter Visitantes to delete.
      * @example
-     * // Delete a few Usuarios
-     * const { count } = await prisma.usuario.deleteMany({
+     * // Delete a few Visitantes
+     * const { count } = await prisma.visitante.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
     **/
-    deleteMany<T extends usuarioDeleteManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, usuarioDeleteManyArgs<ExtArgs>>
+    deleteMany<T extends VisitanteDeleteManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, VisitanteDeleteManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Usuarios.
+     * Update zero or more Visitantes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usuarioUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {VisitanteUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Usuarios
-     * const usuario = await prisma.usuario.updateMany({
+     * // Update many Visitantes
+     * const visitante = await prisma.visitante.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1284,59 +1284,59 @@ export namespace Prisma {
      * })
      * 
     **/
-    updateMany<T extends usuarioUpdateManyArgs<ExtArgs>>(
-      args: SelectSubset<T, usuarioUpdateManyArgs<ExtArgs>>
+    updateMany<T extends VisitanteUpdateManyArgs<ExtArgs>>(
+      args: SelectSubset<T, VisitanteUpdateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create or update one Usuario.
-     * @param {usuarioUpsertArgs} args - Arguments to update or create a Usuario.
+     * Create or update one Visitante.
+     * @param {VisitanteUpsertArgs} args - Arguments to update or create a Visitante.
      * @example
-     * // Update or create a Usuario
-     * const usuario = await prisma.usuario.upsert({
+     * // Update or create a Visitante
+     * const visitante = await prisma.visitante.upsert({
      *   create: {
-     *     // ... data to create a Usuario
+     *     // ... data to create a Visitante
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Usuario we want to update
+     *     // ... the filter for the Visitante we want to update
      *   }
      * })
     **/
-    upsert<T extends usuarioUpsertArgs<ExtArgs>>(
-      args: SelectSubset<T, usuarioUpsertArgs<ExtArgs>>
-    ): Prisma__usuarioClient<$Result.GetResult<Prisma.$usuarioPayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
+    upsert<T extends VisitanteUpsertArgs<ExtArgs>>(
+      args: SelectSubset<T, VisitanteUpsertArgs<ExtArgs>>
+    ): Prisma__VisitanteClient<$Result.GetResult<Prisma.$VisitantePayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
 
     /**
-     * Count the number of Usuarios.
+     * Count the number of Visitantes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usuarioCountArgs} args - Arguments to filter Usuarios to count.
+     * @param {VisitanteCountArgs} args - Arguments to filter Visitantes to count.
      * @example
-     * // Count the number of Usuarios
-     * const count = await prisma.usuario.count({
+     * // Count the number of Visitantes
+     * const count = await prisma.visitante.count({
      *   where: {
-     *     // ... the filter for the Usuarios we want to count
+     *     // ... the filter for the Visitantes we want to count
      *   }
      * })
     **/
-    count<T extends usuarioCountArgs>(
-      args?: Subset<T, usuarioCountArgs>,
+    count<T extends VisitanteCountArgs>(
+      args?: Subset<T, VisitanteCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], UsuarioCountAggregateOutputType>
+          : GetScalarType<T['select'], VisitanteCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Usuario.
+     * Allows you to perform aggregations operations on a Visitante.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsuarioAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {VisitanteAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1356,13 +1356,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends UsuarioAggregateArgs>(args: Subset<T, UsuarioAggregateArgs>): Prisma.PrismaPromise<GetUsuarioAggregateType<T>>
+    aggregate<T extends VisitanteAggregateArgs>(args: Subset<T, VisitanteAggregateArgs>): Prisma.PrismaPromise<GetVisitanteAggregateType<T>>
 
     /**
-     * Group by Usuario.
+     * Group by Visitante.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {usuarioGroupByArgs} args - Group by arguments.
+     * @param {VisitanteGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1377,14 +1377,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends usuarioGroupByArgs,
+      T extends VisitanteGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: usuarioGroupByArgs['orderBy'] }
-        : { orderBy?: usuarioGroupByArgs['orderBy'] },
+        ? { orderBy: VisitanteGroupByArgs['orderBy'] }
+        : { orderBy?: VisitanteGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1433,20 +1433,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, usuarioGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUsuarioGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, VisitanteGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetVisitanteGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the usuario model
+   * Fields of the Visitante model
    */
-  readonly fields: usuarioFieldRefs;
+  readonly fields: VisitanteFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for usuario.
+   * The delegate class that acts as a "Promise-like" for Visitante.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__usuarioClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__VisitanteClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: 'PrismaPromise';
 
 
@@ -1475,297 +1475,297 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the usuario model
+   * Fields of the Visitante model
    */ 
-  interface usuarioFieldRefs {
-    readonly id: FieldRef<"usuario", 'Int'>
-    readonly nome: FieldRef<"usuario", 'String'>
-    readonly email: FieldRef<"usuario", 'String'>
-    readonly empresa: FieldRef<"usuario", 'String'>
-    readonly printed: FieldRef<"usuario", 'Boolean'>
+  interface VisitanteFieldRefs {
+    readonly id: FieldRef<"Visitante", 'Int'>
+    readonly nome: FieldRef<"Visitante", 'String'>
+    readonly email: FieldRef<"Visitante", 'String'>
+    readonly empresa: FieldRef<"Visitante", 'String'>
+    readonly printed: FieldRef<"Visitante", 'Boolean'>
   }
     
 
   // Custom InputTypes
 
   /**
-   * usuario findUnique
+   * Visitante findUnique
    */
-  export type usuarioFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the usuario
+     * Select specific fields to fetch from the Visitante
      */
-    select?: usuarioSelect<ExtArgs> | null
+    select?: VisitanteSelect<ExtArgs> | null
     /**
-     * Filter, which usuario to fetch.
+     * Filter, which Visitante to fetch.
      */
-    where: usuarioWhereUniqueInput
+    where: VisitanteWhereUniqueInput
   }
 
 
   /**
-   * usuario findUniqueOrThrow
+   * Visitante findUniqueOrThrow
    */
-  export type usuarioFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the usuario
+     * Select specific fields to fetch from the Visitante
      */
-    select?: usuarioSelect<ExtArgs> | null
+    select?: VisitanteSelect<ExtArgs> | null
     /**
-     * Filter, which usuario to fetch.
+     * Filter, which Visitante to fetch.
      */
-    where: usuarioWhereUniqueInput
+    where: VisitanteWhereUniqueInput
   }
 
 
   /**
-   * usuario findFirst
+   * Visitante findFirst
    */
-  export type usuarioFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the usuario
+     * Select specific fields to fetch from the Visitante
      */
-    select?: usuarioSelect<ExtArgs> | null
+    select?: VisitanteSelect<ExtArgs> | null
     /**
-     * Filter, which usuario to fetch.
+     * Filter, which Visitante to fetch.
      */
-    where?: usuarioWhereInput
+    where?: VisitanteWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of usuarios to fetch.
+     * Determine the order of Visitantes to fetch.
      */
-    orderBy?: usuarioOrderByWithRelationInput | usuarioOrderByWithRelationInput[]
+    orderBy?: VisitanteOrderByWithRelationInput | VisitanteOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for usuarios.
+     * Sets the position for searching for Visitantes.
      */
-    cursor?: usuarioWhereUniqueInput
+    cursor?: VisitanteWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` usuarios from the position of the cursor.
+     * Take `±n` Visitantes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` usuarios.
+     * Skip the first `n` Visitantes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of usuarios.
+     * Filter by unique combinations of Visitantes.
      */
-    distinct?: UsuarioScalarFieldEnum | UsuarioScalarFieldEnum[]
+    distinct?: VisitanteScalarFieldEnum | VisitanteScalarFieldEnum[]
   }
 
 
   /**
-   * usuario findFirstOrThrow
+   * Visitante findFirstOrThrow
    */
-  export type usuarioFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the usuario
+     * Select specific fields to fetch from the Visitante
      */
-    select?: usuarioSelect<ExtArgs> | null
+    select?: VisitanteSelect<ExtArgs> | null
     /**
-     * Filter, which usuario to fetch.
+     * Filter, which Visitante to fetch.
      */
-    where?: usuarioWhereInput
+    where?: VisitanteWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of usuarios to fetch.
+     * Determine the order of Visitantes to fetch.
      */
-    orderBy?: usuarioOrderByWithRelationInput | usuarioOrderByWithRelationInput[]
+    orderBy?: VisitanteOrderByWithRelationInput | VisitanteOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for usuarios.
+     * Sets the position for searching for Visitantes.
      */
-    cursor?: usuarioWhereUniqueInput
+    cursor?: VisitanteWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` usuarios from the position of the cursor.
+     * Take `±n` Visitantes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` usuarios.
+     * Skip the first `n` Visitantes.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of usuarios.
+     * Filter by unique combinations of Visitantes.
      */
-    distinct?: UsuarioScalarFieldEnum | UsuarioScalarFieldEnum[]
+    distinct?: VisitanteScalarFieldEnum | VisitanteScalarFieldEnum[]
   }
 
 
   /**
-   * usuario findMany
+   * Visitante findMany
    */
-  export type usuarioFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the usuario
+     * Select specific fields to fetch from the Visitante
      */
-    select?: usuarioSelect<ExtArgs> | null
+    select?: VisitanteSelect<ExtArgs> | null
     /**
-     * Filter, which usuarios to fetch.
+     * Filter, which Visitantes to fetch.
      */
-    where?: usuarioWhereInput
+    where?: VisitanteWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of usuarios to fetch.
+     * Determine the order of Visitantes to fetch.
      */
-    orderBy?: usuarioOrderByWithRelationInput | usuarioOrderByWithRelationInput[]
+    orderBy?: VisitanteOrderByWithRelationInput | VisitanteOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing usuarios.
+     * Sets the position for listing Visitantes.
      */
-    cursor?: usuarioWhereUniqueInput
+    cursor?: VisitanteWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` usuarios from the position of the cursor.
+     * Take `±n` Visitantes from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` usuarios.
+     * Skip the first `n` Visitantes.
      */
     skip?: number
-    distinct?: UsuarioScalarFieldEnum | UsuarioScalarFieldEnum[]
+    distinct?: VisitanteScalarFieldEnum | VisitanteScalarFieldEnum[]
   }
 
 
   /**
-   * usuario create
+   * Visitante create
    */
-  export type usuarioCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the usuario
+     * Select specific fields to fetch from the Visitante
      */
-    select?: usuarioSelect<ExtArgs> | null
+    select?: VisitanteSelect<ExtArgs> | null
     /**
-     * The data needed to create a usuario.
+     * The data needed to create a Visitante.
      */
-    data: XOR<usuarioCreateInput, usuarioUncheckedCreateInput>
+    data: XOR<VisitanteCreateInput, VisitanteUncheckedCreateInput>
   }
 
 
   /**
-   * usuario createMany
+   * Visitante createMany
    */
-  export type usuarioCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many usuarios.
+     * The data used to create many Visitantes.
      */
-    data: usuarioCreateManyInput | usuarioCreateManyInput[]
+    data: VisitanteCreateManyInput | VisitanteCreateManyInput[]
     skipDuplicates?: boolean
   }
 
 
   /**
-   * usuario update
+   * Visitante update
    */
-  export type usuarioUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the usuario
+     * Select specific fields to fetch from the Visitante
      */
-    select?: usuarioSelect<ExtArgs> | null
+    select?: VisitanteSelect<ExtArgs> | null
     /**
-     * The data needed to update a usuario.
+     * The data needed to update a Visitante.
      */
-    data: XOR<usuarioUpdateInput, usuarioUncheckedUpdateInput>
+    data: XOR<VisitanteUpdateInput, VisitanteUncheckedUpdateInput>
     /**
-     * Choose, which usuario to update.
+     * Choose, which Visitante to update.
      */
-    where: usuarioWhereUniqueInput
+    where: VisitanteWhereUniqueInput
   }
 
 
   /**
-   * usuario updateMany
+   * Visitante updateMany
    */
-  export type usuarioUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update usuarios.
+     * The data used to update Visitantes.
      */
-    data: XOR<usuarioUpdateManyMutationInput, usuarioUncheckedUpdateManyInput>
+    data: XOR<VisitanteUpdateManyMutationInput, VisitanteUncheckedUpdateManyInput>
     /**
-     * Filter which usuarios to update
+     * Filter which Visitantes to update
      */
-    where?: usuarioWhereInput
+    where?: VisitanteWhereInput
   }
 
 
   /**
-   * usuario upsert
+   * Visitante upsert
    */
-  export type usuarioUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the usuario
+     * Select specific fields to fetch from the Visitante
      */
-    select?: usuarioSelect<ExtArgs> | null
+    select?: VisitanteSelect<ExtArgs> | null
     /**
-     * The filter to search for the usuario to update in case it exists.
+     * The filter to search for the Visitante to update in case it exists.
      */
-    where: usuarioWhereUniqueInput
+    where: VisitanteWhereUniqueInput
     /**
-     * In case the usuario found by the `where` argument doesn't exist, create a new usuario with this data.
+     * In case the Visitante found by the `where` argument doesn't exist, create a new Visitante with this data.
      */
-    create: XOR<usuarioCreateInput, usuarioUncheckedCreateInput>
+    create: XOR<VisitanteCreateInput, VisitanteUncheckedCreateInput>
     /**
-     * In case the usuario was found with the provided `where` argument, update it with this data.
+     * In case the Visitante was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<usuarioUpdateInput, usuarioUncheckedUpdateInput>
+    update: XOR<VisitanteUpdateInput, VisitanteUncheckedUpdateInput>
   }
 
 
   /**
-   * usuario delete
+   * Visitante delete
    */
-  export type usuarioDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the usuario
+     * Select specific fields to fetch from the Visitante
      */
-    select?: usuarioSelect<ExtArgs> | null
+    select?: VisitanteSelect<ExtArgs> | null
     /**
-     * Filter which usuario to delete.
+     * Filter which Visitante to delete.
      */
-    where: usuarioWhereUniqueInput
+    where: VisitanteWhereUniqueInput
   }
 
 
   /**
-   * usuario deleteMany
+   * Visitante deleteMany
    */
-  export type usuarioDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which usuarios to delete
+     * Filter which Visitantes to delete
      */
-    where?: usuarioWhereInput
+    where?: VisitanteWhereInput
   }
 
 
   /**
-   * usuario without action
+   * Visitante without action
    */
-  export type usuarioDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type VisitanteDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the usuario
+     * Select specific fields to fetch from the Visitante
      */
-    select?: usuarioSelect<ExtArgs> | null
+    select?: VisitanteSelect<ExtArgs> | null
   }
 
 
@@ -1784,7 +1784,7 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const UsuarioScalarFieldEnum: {
+  export const VisitanteScalarFieldEnum: {
     id: 'id',
     nome: 'nome',
     email: 'email',
@@ -1792,7 +1792,7 @@ export namespace Prisma {
     printed: 'printed'
   };
 
-  export type UsuarioScalarFieldEnum = (typeof UsuarioScalarFieldEnum)[keyof typeof UsuarioScalarFieldEnum]
+  export type VisitanteScalarFieldEnum = (typeof VisitanteScalarFieldEnum)[keyof typeof VisitanteScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1868,18 +1868,18 @@ export namespace Prisma {
    */
 
 
-  export type usuarioWhereInput = {
-    AND?: usuarioWhereInput | usuarioWhereInput[]
-    OR?: usuarioWhereInput[]
-    NOT?: usuarioWhereInput | usuarioWhereInput[]
-    id?: IntFilter<"usuario"> | number
-    nome?: StringFilter<"usuario"> | string
-    email?: StringFilter<"usuario"> | string
-    empresa?: StringFilter<"usuario"> | string
-    printed?: BoolFilter<"usuario"> | boolean
+  export type VisitanteWhereInput = {
+    AND?: VisitanteWhereInput | VisitanteWhereInput[]
+    OR?: VisitanteWhereInput[]
+    NOT?: VisitanteWhereInput | VisitanteWhereInput[]
+    id?: IntFilter<"Visitante"> | number
+    nome?: StringFilter<"Visitante"> | string
+    email?: StringFilter<"Visitante"> | string
+    empresa?: StringFilter<"Visitante"> | string
+    printed?: BoolFilter<"Visitante"> | boolean
   }
 
-  export type usuarioOrderByWithRelationInput = {
+  export type VisitanteOrderByWithRelationInput = {
     id?: SortOrder
     nome?: SortOrder
     email?: SortOrder
@@ -1887,49 +1887,49 @@ export namespace Prisma {
     printed?: SortOrder
   }
 
-  export type usuarioWhereUniqueInput = Prisma.AtLeast<{
+  export type VisitanteWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: usuarioWhereInput | usuarioWhereInput[]
-    OR?: usuarioWhereInput[]
-    NOT?: usuarioWhereInput | usuarioWhereInput[]
-    nome?: StringFilter<"usuario"> | string
-    email?: StringFilter<"usuario"> | string
-    empresa?: StringFilter<"usuario"> | string
-    printed?: BoolFilter<"usuario"> | boolean
+    AND?: VisitanteWhereInput | VisitanteWhereInput[]
+    OR?: VisitanteWhereInput[]
+    NOT?: VisitanteWhereInput | VisitanteWhereInput[]
+    nome?: StringFilter<"Visitante"> | string
+    email?: StringFilter<"Visitante"> | string
+    empresa?: StringFilter<"Visitante"> | string
+    printed?: BoolFilter<"Visitante"> | boolean
   }, "id">
 
-  export type usuarioOrderByWithAggregationInput = {
+  export type VisitanteOrderByWithAggregationInput = {
     id?: SortOrder
     nome?: SortOrder
     email?: SortOrder
     empresa?: SortOrder
     printed?: SortOrder
-    _count?: usuarioCountOrderByAggregateInput
-    _avg?: usuarioAvgOrderByAggregateInput
-    _max?: usuarioMaxOrderByAggregateInput
-    _min?: usuarioMinOrderByAggregateInput
-    _sum?: usuarioSumOrderByAggregateInput
+    _count?: VisitanteCountOrderByAggregateInput
+    _avg?: VisitanteAvgOrderByAggregateInput
+    _max?: VisitanteMaxOrderByAggregateInput
+    _min?: VisitanteMinOrderByAggregateInput
+    _sum?: VisitanteSumOrderByAggregateInput
   }
 
-  export type usuarioScalarWhereWithAggregatesInput = {
-    AND?: usuarioScalarWhereWithAggregatesInput | usuarioScalarWhereWithAggregatesInput[]
-    OR?: usuarioScalarWhereWithAggregatesInput[]
-    NOT?: usuarioScalarWhereWithAggregatesInput | usuarioScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"usuario"> | number
-    nome?: StringWithAggregatesFilter<"usuario"> | string
-    email?: StringWithAggregatesFilter<"usuario"> | string
-    empresa?: StringWithAggregatesFilter<"usuario"> | string
-    printed?: BoolWithAggregatesFilter<"usuario"> | boolean
+  export type VisitanteScalarWhereWithAggregatesInput = {
+    AND?: VisitanteScalarWhereWithAggregatesInput | VisitanteScalarWhereWithAggregatesInput[]
+    OR?: VisitanteScalarWhereWithAggregatesInput[]
+    NOT?: VisitanteScalarWhereWithAggregatesInput | VisitanteScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Visitante"> | number
+    nome?: StringWithAggregatesFilter<"Visitante"> | string
+    email?: StringWithAggregatesFilter<"Visitante"> | string
+    empresa?: StringWithAggregatesFilter<"Visitante"> | string
+    printed?: BoolWithAggregatesFilter<"Visitante"> | boolean
   }
 
-  export type usuarioCreateInput = {
+  export type VisitanteCreateInput = {
     nome: string
     email: string
     empresa: string
     printed: boolean
   }
 
-  export type usuarioUncheckedCreateInput = {
+  export type VisitanteUncheckedCreateInput = {
     id?: number
     nome: string
     email: string
@@ -1937,14 +1937,14 @@ export namespace Prisma {
     printed: boolean
   }
 
-  export type usuarioUpdateInput = {
+  export type VisitanteUpdateInput = {
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     empresa?: StringFieldUpdateOperationsInput | string
     printed?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type usuarioUncheckedUpdateInput = {
+  export type VisitanteUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -1952,7 +1952,7 @@ export namespace Prisma {
     printed?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type usuarioCreateManyInput = {
+  export type VisitanteCreateManyInput = {
     id?: number
     nome: string
     email: string
@@ -1960,14 +1960,14 @@ export namespace Prisma {
     printed: boolean
   }
 
-  export type usuarioUpdateManyMutationInput = {
+  export type VisitanteUpdateManyMutationInput = {
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     empresa?: StringFieldUpdateOperationsInput | string
     printed?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type usuarioUncheckedUpdateManyInput = {
+  export type VisitanteUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -2006,7 +2006,7 @@ export namespace Prisma {
     not?: NestedBoolFilter<$PrismaModel> | boolean
   }
 
-  export type usuarioCountOrderByAggregateInput = {
+  export type VisitanteCountOrderByAggregateInput = {
     id?: SortOrder
     nome?: SortOrder
     email?: SortOrder
@@ -2014,19 +2014,11 @@ export namespace Prisma {
     printed?: SortOrder
   }
 
-  export type usuarioAvgOrderByAggregateInput = {
+  export type VisitanteAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type usuarioMaxOrderByAggregateInput = {
-    id?: SortOrder
-    nome?: SortOrder
-    email?: SortOrder
-    empresa?: SortOrder
-    printed?: SortOrder
-  }
-
-  export type usuarioMinOrderByAggregateInput = {
+  export type VisitanteMaxOrderByAggregateInput = {
     id?: SortOrder
     nome?: SortOrder
     email?: SortOrder
@@ -2034,7 +2026,15 @@ export namespace Prisma {
     printed?: SortOrder
   }
 
-  export type usuarioSumOrderByAggregateInput = {
+  export type VisitanteMinOrderByAggregateInput = {
+    id?: SortOrder
+    nome?: SortOrder
+    email?: SortOrder
+    empresa?: SortOrder
+    printed?: SortOrder
+  }
+
+  export type VisitanteSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -2184,9 +2184,9 @@ export namespace Prisma {
    * Aliases for legacy arg types
    */
     /**
-     * @deprecated Use usuarioDefaultArgs instead
+     * @deprecated Use VisitanteDefaultArgs instead
      */
-    export type usuarioArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = usuarioDefaultArgs<ExtArgs>
+    export type VisitanteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = VisitanteDefaultArgs<ExtArgs>
 
   /**
    * Batch Payload for updateMany & deleteMany & createMany
