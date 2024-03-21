@@ -1,5 +1,6 @@
 import { PrismaClient } from "./generated/client/deno/edge.ts";
-import { Application, Router } from "jsr:@oak/oak@14";
+import { Application, Router } from "https://deno.land/x/oak@14.2.0/mod.ts";
+import { oakCors } from "https://deno.land/x/cors@v1.2.2/mod.ts";
 
 import { load } from "https://deno.land/std@0.220.1/dotenv/mod.ts";
 
@@ -85,6 +86,7 @@ router
     context.response.body = visitante;
   });
 
+app.use(oakCors());
 app.use(router.routes());
 app.use(router.allowedMethods());
 
