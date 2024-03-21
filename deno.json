@@ -1,5 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "migrate": "deno run -A npm:prisma migrate dev --name init",
+    "dev": "deno run -A main.ts"
   }
 }
