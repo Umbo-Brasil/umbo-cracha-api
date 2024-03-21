@@ -24,7 +24,7 @@ router
     const visitantes = await prisma.visitante.findMany();
     context.response.body = visitantes;
   })
-  .get("/visitate/:id", async (context) => {
+  .get("/visitante/:id", async (context) => {
     const { id } = context.params;
     const visitante = await prisma.visitante.findUnique({
       where: {
@@ -32,6 +32,36 @@ router
       },
     });
     context.response.body = visitante;
+  })
+  .get("/visitante-nome/:nome", async (context) => {
+    const { nome } = context.params;
+    const visitantes = await prisma.visitante.findMany({
+      where: {
+        AND: {
+          nome: {
+            contains: nome.toUpperCase(),
+          },
+          printed: false,
+        },
+      },
+    });
+    context.response.body = visitantes;
+  })
+  .patch("/visitante/:id", async (context) => {
+    const { nome, empresa, email } = await context.request.body.json();
+    const { id } = context.params;
+    const visitante = await prisma.visitante.update({
+      where: {
+        id: Number(id),
+      },
+      data: {
+        nome: nome.toUpperCase(),
+        empresa: empresa,
+        email: email,
+        printed: true,
+      },
+    });
+    context.response.body = ["atualizado", visitante];
   })
   .post("/visitante", async (context) => {
     const { nome, empresa, email } = await context.request.body.json();
@@ -58,4 +88,5 @@ router
 app.use(router.routes());
 app.use(router.allowedMethods());
 
+console.log(`Server listening on: http://localhost:8000`);
 await app.listen({ port: 8000 });
