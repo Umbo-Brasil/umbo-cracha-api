@@ -1,11 +1,12 @@
 import { PrismaClient } from "./generated/client/deno/edge.ts";
 import { Application, Router } from "https://deno.land/x/oak@14.2.0/mod.ts";
 import { oakCors } from "https://deno.land/x/cors@v1.2.2/mod.ts";
-
 import { load } from "https://deno.land/std@0.220.1/dotenv/mod.ts";
 
-const env = await load();
+import { WebSocketClient, WebSocketServer } from "https://deno.land/x/websocket@v0.1.4/mod.ts";
 
+const env = await load();
+let dataForWebSocket: any;
 const prisma = new PrismaClient({
   datasources: {
     db: {
@@ -62,6 +63,7 @@ router
         printed: Boolean(printed),
       },
     });
+    dataForWebSocket = { nome: visitante.nome, empresa: visitante.empresa };
     context.response.body = ["atualizado", visitante];
   })
   .post("/visitante", async (context) => {
@@ -74,6 +76,7 @@ router
         printed: true,
       },
     });
+    dataForWebSocket = { nome: result.nome, empresa: result.empresa };
     context.response.body = result;
   })
   .delete("/visitante/:id", async (context) => {
@@ -84,7 +87,23 @@ router
       },
     });
     context.response.body = visitante;
-  });
+  })
+
+const wss = new WebSocketServer(8080);
+wss.on("connection", function (ws: WebSocketClient) {
+  console.log("Client connected")
+  setInterval(() => {
+    if (dataForWebSocket) {  // Check if data is available
+      console.log(dataForWebSocket);
+      try {
+        ws.send(JSON.stringify(dataForWebSocket));
+      } catch (error) {
+        console.error("Error sending WebSocket message:", error);
+      }
+    }
+    dataForWebSocket = null;
+  }, 2000);
+});
 
 app.use(oakCors());
 app.use(router.routes());
